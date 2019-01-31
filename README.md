@@ -53,3 +53,7 @@ test.get_id_by_name('london','GB')
 
 ### Learning points
 1. Developed my experience of using an API with limited documentation 
+
+
+### Future work
+1. All the foundations laid out, and very simple to add a random city generator for tests in the future development
