@@ -5,7 +5,7 @@ This is an attempt to create a Test which on the https://openweathermap.org/curr
 ### Languages used
 * Ruby 
 
-### Frameworks, Libraries and Gems used used
+### Frameworks, Libraries and Gems used
 * Rspec
 * HTTParty
 * Json
