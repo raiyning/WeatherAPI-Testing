@@ -1,7 +1,7 @@
 # WeatherAPI-UnitTesting
 ### Description
 
-This is an attempt to create a Test which on the https://openweathermap.org/current and https://openweathermap.org/forecast5 API service with limited documentation on the website. The program will test a different parameter to the JSON file recieved from the website. The tests are created on rspec with a TDD approach. Stored within included is the ability to retrieve the cityID with city name with country initials. 
+This is an attempt to create a Test which on the https://openweathermap.org/current and https://openweathermap.org/forecast5 API service with limited documentation on the website. The program will test a different parameter to the JSON file recieved from the website. The tests are created on rspec with a TDD approach and the classes written are in a SOM (Service Object Model)structure for good use. Stored within included is the ability to retrieve the cityID with city name with country initials. 
 ### Languages used
 * Ruby 
 
@@ -52,7 +52,8 @@ test.get_id_by_name('london','GB')
 
 
 ### Learning points
-1. Developed my experience of using an API with limited documentation 
+1. Developed my experience of using an API with limited documentation
+2. Structure classes using SOM principles
 
 
 ### Future work
