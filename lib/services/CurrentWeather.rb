@@ -27,7 +27,124 @@ class CurrentWeather
 
   def retrieve_latitude
     retrieve_coord['lat']
-   end
+  end
+
+  def retrieve_weather
+    @weather['weather']
+  end
+
+  def retrieve_weather_hash
+    retrieve_weather[0]
+  end
+
+  def retrieve_weather_hash_id
+    retrieve_weather_hash['id']
+  end
+
+  def retrieve_weather_hash_main
+    retrieve_weather_hash['main']
+  end
+
+  def retrieve_weather_hash_description
+    retrieve_weather_hash['description']
+  end
+
+  def retrieve_weather_hash_icon
+    retrieve_weather_hash['icon']
+  end
+
+  def retrieve_base
+    @weather['base']
+  end
+
+  def retrieve_main
+    @weather['main']
+  end
+
+  def retrieve_main_temperature
+    retrieve_main['temp']
+  end
+
+  def retrieve_main_pressure
+    retrieve_main['pressure']
+  end
+
+  def retrieve_main_humidity
+    retrieve_main['humidity']
+  end
+
+  def retrieve_main_temp_min
+    retrieve_main['temp_min']
+  end
+
+  def retrieve_main_temp_max
+    retrieve_main['temp_max']
+  end
+
+  def retrieve_visibility
+    @weather['visibiility']
+  end
+
+  def retrieve_wind
+    @weather['wind']
+  end
+
+  def retrieve_wind_speed
+    retrieve_wind['speed']
+  end
+
+  def retrieve_wind_deg
+    retrieve_wind['deg']
+  end
+
+  def retrieve_cloud
+    @weather['clouds']
+  end
+
+  def retrieve_cloud_all
+    retrieve_cloud['all']
+  end
+
+  def retrieve_dt
+    @weather['dt']
+  end
+
+  def retrieve_sys
+    @weather['sys']
+  end
+
+  def retrieve_sys_type
+    retrieve_sys['type']
+  end
+
+  def retrieve_sys_id
+    retrieve_sys['id']
+  end
+
+  def retrieve_sys_message
+    retrieve_sys['message']
+  end
+
+  def retrieve_sys_country
+    retrieve_sys['country']
+  end
+
+  def retrieve_sys_sunrise
+    retrieve_sys['sunrise']
+  end 
+
+  def retrieve_sys_sunset
+    retrieve_sys['sunset']
+  end
+
+  def retrieve_id
+    @weather['id']
+  end
+
+  def retrieve_name
+    @weather['name']
+  end
+
 
 end
 
