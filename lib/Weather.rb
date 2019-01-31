@@ -3,7 +3,7 @@ require_relative 'services/fivedayweather'
 
 
 class Weatherio
-
+  #superclass
   def single_current_weather
     CurrentWeather.new
   end

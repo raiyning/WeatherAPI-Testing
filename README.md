@@ -1,8 +1,7 @@
 # WeatherAPI-UnitTesting
 ### Description
 
-This is an attempt to create a Test which on the https://openweathermap.org/current and https://openweathermap.org/forecast5 API service with limited documentation on the website. The program will test a different parameter to the JSON file recieved from the website. The tests are created on rspec with a TDD approach.
-
+This is an attempt to create a Test which on the https://openweathermap.org/current and https://openweathermap.org/forecast5 API service with limited documentation on the website. The program will test a different parameter to the JSON file recieved from the website. The tests are created on rspec with a TDD approach. Stored within included is the ability to retrieve the cityID with city name with country initials. 
 ### Languages used
 * Ruby 
 
@@ -20,40 +19,37 @@ This is an attempt to create a Test which on the https://openweathermap.org/curr
 
 ### How to test
 1. Make sure you have rspec gem install beforehand 
-2. When installed, within terminal type rspec 
+2. open https://openweathermap.org/current and create your own API key to use
+3. Create a empty .env file and type out
+> API_KEY= {insert_your_api_key_without_brackets}
+4. Save file
+2. Within terminal type rspec 
 3. Tests should then display in the terminal, whether they're correct or incorrect with associated contexts
 
-## How to Use Generator Method
-1. Copy lib file and insert folder within your project
-2. Require relative to the Generator class file 
-3. To create the object to use, instanciate the generator
+## How to Use Parse_Json_Cities Method for any cityID
+1. Copy services file folder within your project
+> lib -> generator -> services
+2. Copy the city_list.json
+3. Require relative to the class file 
+3. To create the object to use, instanciate the Parse_json_cities
 ```ruby
-test = Generator.new
+test = Parse_json_cities.new
 ```
-4. After instanciating the postcodes on the generator into a new variable 
+4. After instanciating, execute the get_id_by_name method using 
 
 ```ruby
-test.postcodes
+test.get_id_by_name('london','GB')
 ```
 
-5. For example execute the postcode methods using
-
-```ruby
-test.random_array(random_int_value)
-```
-6. This will create an array populated with an array of postcodes with random_int_value being the interger of your choice 
-or for a random number:
-
-```ruby
-rand(1..100)
-```
-This will give you any number between 1 to 100
+6. This will return with cityID number usable with weather API
+>'2643743'
 
 ### Challenges 
 1. Deciding the degree of testing required in each parameters
 2. Inconsistent parameter recieved from the API
-3. 
+3. Definition of done testing
+4. Taking time factor to consideration
 
 
 ### Learning points
-1. Developed my understanding of dealing with an API unit testing
+1. Developed my experience of using an API with limited documentation 

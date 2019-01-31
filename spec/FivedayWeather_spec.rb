@@ -7,7 +7,6 @@ describe Weatherio do
       @five_day_weather_service = Weatherio.new.five_current_weather
       @cityid = ParseJson.new.get_id_by_name('Vinogradovo','RU')
       @five_day_weather_service.retrieve_current(ENV['API_KEY'], @cityid)
-      # p @weatherio
     end
 
 
