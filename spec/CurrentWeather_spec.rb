@@ -7,7 +7,6 @@ describe Weatherio do
       @weatherio = Weatherio.new.single_current_weather
       @cityid = ParseJson.new.get_id_by_name('Bacau','RO')
       @weatherio.retrieve_current(ENV['API_KEY'], @cityid)
-      p @weatherio
     end
 
     it "should have api respond with a hash" do
@@ -118,16 +117,16 @@ describe Weatherio do
       expect(@weatherio.retrieve_wind_speed).to  be_between(0,400) 
     end
 
-    it "should have wind deg stored as Integer " do
-      expect(@weatherio.retrieve_wind_deg).to be_kind_of(Integer) 
+    it "should have wind deg stored as Float " do
+      expect(@weatherio.retrieve_wind_deg).to be_kind_of(Float) 
     end
     
     it "should have wind speed between maximum and minimum values for wind degrees" do
-      expect(@weatherio.retrieve_wind_speed).to  be_between(0,360) 
+      expect(@weatherio.retrieve_wind_speed).to  be_between(0,400) 
     end
     
-    it "should have wind deg stored as Integer " do
-      expect(@weatherio.retrieve_wind_deg).to be_kind_of(Integer) 
+    it "should have wind deg maximum and minimum values for wind degrees " do
+      expect(@weatherio.retrieve_wind_deg).to be_between(0,360) 
     end
 
     it "should have cloud stored as Hash " do
