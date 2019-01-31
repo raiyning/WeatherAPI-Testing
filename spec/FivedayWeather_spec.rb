@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+# rspec tests for forecast weather, requires more suffcient testing 
 describe Weatherio do
 
   context 'requesting information on a five current weather forecast correctly' do
@@ -8,7 +8,6 @@ describe Weatherio do
       @cityid = ParseJson.new.get_id_by_name('Vinogradovo','RU')
       @five_day_weather_service.retrieve_current(ENV['API_KEY'], @cityid)
     end
-
 
     it "should have api respond with a hash" do
       expect(@five_day_weather_service.retrieve_data).to be_kind_of(Hash)
@@ -110,6 +109,5 @@ describe Weatherio do
       end
     end
     
-
   end
 end

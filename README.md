@@ -22,7 +22,7 @@ This is an attempt to create a Test which on the https://openweathermap.org/curr
 2. open https://openweathermap.org/current and create your own API key to use
 3. Create a empty .env file and type out
 > API_KEY= {insert_your_api_key_without_brackets}
-4. Save file
+4. Save file (You may want to create a gitignore to avoid exposure of api keys)
 2. Within terminal type rspec 
 3. Tests should then display in the terminal, whether they're correct or incorrect with associated contexts
 
