@@ -5,7 +5,8 @@ describe Weatherio do
   context 'requesting information on a single current weather forecast correctly' do
     before(:all) do
       @weatherio = Weatherio.new.single_current_weather
-      @weatherio.retrieve_current(ENV['API_KEY'], '2172797')
+      @cityid = ParseJson.new.get_id_by_name('Bacau','RO')
+      @weatherio.retrieve_current(ENV['API_KEY'], @cityid)
       p @weatherio
     end
 
